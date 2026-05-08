@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ecom-frontend
-          image: ecom-frontend:latest
+          image: ecom-frontend-app:latest
           imagePullPolicy: Never
 
           ports:
