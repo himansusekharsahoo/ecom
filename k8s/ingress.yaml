@@ -2,19 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ecom-frontend-ingress
-  labels:
-    app.kubernetes.io/name: ecom-frontend-ingress
 spec:
   ingressClassName: nginx
   rules:
-  - host: ecom.local
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: ecom-frontend-service
-            port: 
-              number: 80
-              
+    - host: ecom.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ecom-frontend-service
+                port:
+                  number: 80

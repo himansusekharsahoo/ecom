@@ -1,16 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-
 metadata:
   name: ecom-frontend-app
   namespace: argocd
-
 spec:
   project: default
-  
   source:
     repoURL: https://github.com/himansusekharsahoo/ecom.git
-    targetRevision: HEAD
+    targetRevision: main
     path: k8s
   destination:
     server: https://kubernetes.default.svc

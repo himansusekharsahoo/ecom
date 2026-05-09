@@ -16,22 +16,17 @@ spec:
         - name: ecom-frontend
           image: ecom-frontend-app:latest
           imagePullPolicy: Never
-
           ports:
             - containerPort: 3000
-
           env:
             - name: DATABASE_URL
-              value: postgresql://postgres@postgres:5432/ecom
-
+              value: postgresql://postgres:postgres@postgres:5432/ecom
             - name: REDIS_URL
               value: redis://redis:6379
-
           resources:
             requests:
-              memory: "128Mi"
-              cpu: "100m"
-
+              cpu: 100m
+              memory: 128Mi
             limits:
-              memory: "512Mi"
-              cpu: "500m"
+              cpu: 500m
+              memory: 512Mi
