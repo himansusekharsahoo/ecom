@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: ecom-frontend
-          image: ecom-frontend-app:latest
-          imagePullPolicy: Never
+          image: ghcr.io/himansusahoo/ecom-frontend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           env:
